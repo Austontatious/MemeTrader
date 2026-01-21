@@ -1,0 +1,18 @@
+{
+  "jsonrpc": "2.0",
+  "result": {
+    "slot": 123456789,
+    "blockTime": 1710000000,
+    "meta": {
+      "err": null,
+      "fee": 5000
+    },
+    "transaction": {
+      "signatures": ["5gB1LrYp"],
+      "message": {
+        "accountKeys": ["AccountA", "AccountB"]
+      }
+    }
+  },
+  "id": 1
+}

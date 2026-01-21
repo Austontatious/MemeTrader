@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "data": {
+    "address": "So11111111111111111111111111111111111111112",
+    "symbol": "TEST",
+    "name": "Test Token",
+    "price": 3.5,
+    "liquidity": 120000.0,
+    "volume24h": 550000.0,
+    "trade24h": 1234,
+    "marketCap": 10000000.0,
+    "fdv": 20000000.0,
+    "lastTradeUnixTime": 1710000300
+  }
+}

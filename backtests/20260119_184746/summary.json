@@ -1,0 +1,53 @@
+{
+  "pair_count": 5,
+  "pairs": {
+    "So11111111111111111111111111111111111111112_4FHjNBJUu7zJdYHGnX2AVhfUbDdpYehVYgD2uxhfG4Am": {
+      "total_return_pct": -0.04242787757926936,
+      "max_drawdown_pct": 0.04242787757926931,
+      "profit_factor": 0.0,
+      "win_rate": 0.0,
+      "avg_trade_return_pct": -0.10606969394817341,
+      "trade_count": 4
+    },
+    "So11111111111111111111111111111111111111112_7gbEP2TAy5wM3TmMp5utCrRvdJ3FFqYjgN5KDpXiWPmo": {
+      "total_return_pct": -0.3414649736619204,
+      "max_drawdown_pct": 0.34146497366192047,
+      "profit_factor": 0.0,
+      "win_rate": 0.0,
+      "avg_trade_return_pct": -0.12479174666812837,
+      "trade_count": 12
+    },
+    "So11111111111111111111111111111111111111112_EXA537HSBVpsFijENbt6Muuy9AADUN8dUmYKD4oKbjJE": {
+      "total_return_pct": -0.07110944460635871,
+      "max_drawdown_pct": 0.0711094446063587,
+      "profit_factor": 0.0,
+      "win_rate": 0.0,
+      "avg_trade_return_pct": -0.02962893525264948,
+      "trade_count": 6
+    },
+    "So11111111111111111111111111111111111111112_F6ABFHuQRF6xiGU3wVLpeTqgKaxdFnTp2mXihUrKTNLD": {
+      "total_return_pct": -0.04242787757927258,
+      "max_drawdown_pct": 0.042427877579272605,
+      "profit_factor": 0.0,
+      "win_rate": 0.0,
+      "avg_trade_return_pct": -0.1060696939481815,
+      "trade_count": 4
+    },
+    "So11111111111111111111111111111111111111112_Fb2DefbdjKFPfmTnq4xnuZ9xdtVyXGsEAetoFmGLZQcc": {
+      "total_return_pct": 0.17167335303895248,
+      "max_drawdown_pct": 0.2515266469610475,
+      "profit_factor": 1.682525510172044,
+      "win_rate": 0.08333333333333333,
+      "avg_trade_return_pct": -0.031280024118073256,
+      "trade_count": 12
+    }
+  },
+  "combined": {
+    "total_return_pct": -0.0651513640775736,
+    "max_drawdown_pct": 0.1497913640775736,
+    "profit_factor": 0.5650526018053136,
+    "win_rate": 0.02631578947368421,
+    "avg_trade_return_pct": -0.07629453717199301,
+    "trade_count": 38
+  }
+}

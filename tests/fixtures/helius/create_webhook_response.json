@@ -1,0 +1,7 @@
+{
+  "webhookID": "wh_123",
+  "webhookURL": "https://example.com/helius",
+  "accountAddresses": ["Trader111111111111111111111111111111"],
+  "transactionTypes": ["SWAP"],
+  "webhookType": "enhanced"
+}

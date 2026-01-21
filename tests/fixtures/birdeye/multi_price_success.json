@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "data": {
+    "So11111111111111111111111111111111111111112": {
+      "value": 2.0,
+      "updateUnixTime": 1710000100,
+      "updateHumanTime": "2024-03-09T00:01:40Z",
+      "priceChange24h": 0.05,
+      "liquidity": 100000.0
+    },
+    "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263": {
+      "value": 0.5,
+      "updateUnixTime": 1710000200,
+      "updateHumanTime": "2024-03-09T00:03:20Z",
+      "priceChange24h": -0.02,
+      "liquidity": 25000.0
+    }
+  }
+}

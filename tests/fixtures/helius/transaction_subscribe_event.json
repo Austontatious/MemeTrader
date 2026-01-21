@@ -1,0 +1,34 @@
+{
+  "jsonrpc": "2.0",
+  "method": "transactionNotification",
+  "params": {
+    "result": {
+      "signature": "5gB1LrYp",
+      "timestamp": 1710000010,
+      "type": "SWAP",
+      "source": "JUPITER",
+      "fee": 5000,
+      "feePayer": "FeePayer111111111111111111111111111111",
+      "nativeTransfers": [
+        {
+          "fromUserAccount": "Trader111111111111111111111111111111",
+          "toUserAccount": "Pool1111111111111111111111111111111",
+          "amount": 100000000
+        }
+      ],
+      "tokenTransfers": [
+        {
+          "fromUserAccount": "Pool1111111111111111111111111111111",
+          "toUserAccount": "Trader111111111111111111111111111111",
+          "mint": "So11111111111111111111111111111111111111112",
+          "tokenAmount": {
+            "amount": 250.0,
+            "decimals": 6,
+            "uiAmount": 0.25
+          }
+        }
+      ]
+    },
+    "subscription": 1
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "data": {
+    "value": 3.5,
+    "updateUnixTime": 1710000000,
+    "updateHumanTime": "2024-03-09T00:00:00Z",
+    "priceChange24h": 0.12,
+    "priceInNative": 0.0005,
+    "liquidity": 120000.0,
+    "isScaledUiToken": false,
+    "scaledValue": 3.5,
+    "multiplier": 1.0,
+    "scaledPriceInNative": 0.0005
+  }
+}

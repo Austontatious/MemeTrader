@@ -1,0 +1,32 @@
+{
+  "WIN_PERFECT": {
+    "chain_sources": ["JUPITER", "RAYDIUM"],
+    "chain_swap_count": 42,
+    "chain_tx_count": 85,
+    "chain_tx_velocity_per_min": 12.0,
+    "chain_net_native": 18.5,
+    "chain_net_token": 250000.0,
+    "chain_liquidity_events": 3,
+    "notes": "Sustained activity + positive net inflow + liquidity adds."
+  },
+  "WIN_COMPLEX": {
+    "chain_sources": ["JUPITER"],
+    "chain_swap_count": 28,
+    "chain_tx_count": 55,
+    "chain_tx_velocity_per_min": 7.0,
+    "chain_net_native": 6.2,
+    "chain_net_token": 90000.0,
+    "chain_liquidity_events": 1,
+    "notes": "Good but noisier. Enough confirmation to rank high once logic improves."
+  },
+  "FAKE_HEADFAKE": {
+    "chain_sources": ["JUPITER"],
+    "chain_swap_count": 20,
+    "chain_tx_count": 25,
+    "chain_tx_velocity_per_min": 10.0,
+    "chain_net_native": -7.5,
+    "chain_net_token": -120000.0,
+    "chain_liquidity_events": -2,
+    "notes": "Burst of swaps but net outflow + liquidity removed -> should be rejected."
+  }
+}

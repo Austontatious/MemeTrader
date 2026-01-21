@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "data": {
+    "items": [
+      {
+        "txHash": "0xabc",
+        "side": "buy",
+        "price": 3.4,
+        "size": 100.0,
+        "volumeUSD": 340.0,
+        "blockUnixTime": 1710000400
+      },
+      {
+        "txHash": "0xdef",
+        "side": "sell",
+        "price": 3.6,
+        "size": 50.0,
+        "volumeUSD": 180.0,
+        "blockUnixTime": 1710000500
+      }
+    ],
+    "hasNext": false
+  }
+}

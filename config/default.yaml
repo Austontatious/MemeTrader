@@ -1,0 +1,73 @@
+mock_api_base: "http://127.0.0.1:18080"
+
+discovery:
+  min_liquidity_usd: 30000
+
+market:
+  interval: "1m"
+
+chain:
+  tx_limit: 25
+  baseline_window_sec: 86400
+
+engine:
+  poll_interval_sec: 1
+  cooldown_candles: 60
+
+rules:
+  breakout_lookback: 20
+  vol_multiplier: 1.5
+  add_trigger_up_pct: 0.10
+  time_stop_candles: 120
+  confirm_max_retrace_pct: 0.05
+  confirm_min_close_above_pct: 0.01
+  top_n_per_tick: 2
+  momentum_lookback: 20
+  min_candidates_before_rank: 3
+  progress:
+    min_move_pct: 0.08
+    max_wait_candles: 30
+    breakeven_after_progress: true
+    trail_after_progress: true
+    trail_lookback_lows: 1
+
+breakout:
+  compression_max_range_ratio: 1.25
+  compression_lookback_bars: 20
+  expansion_min_pct: 0.06
+  expansion_reference: "highest_close"
+  chain_override_enabled: true
+  chain_override_min_tx_velocity_per_min: 6.0
+  chain_override_min_swap_count: 20
+  chain_override_min_net_native: 2.0
+  chain_override_min_liquidity_events: 1
+  chain_override_score_bonus: 0.15
+  weak_breakout_score_penalty: 0.05
+
+positioning:
+  capital_usd: 1000
+  probe_pct: 0.10
+  add_pct: 0.30
+  tp1_scale_out_pct: 0.20
+  tp2_scale_out_pct: 0.20
+  tp3_exit_full: true
+
+costs:
+  fee_bps_per_side: 50
+  slippage_bps: 150
+
+risk:
+  max_slippage_bps: 150
+  min_liquidity_usd: 30000
+
+reentry:
+  lockout_candles: 1500
+  min_breakout_pct: 0.10
+  vol_mult_unlock: 2.0
+
+stops:
+  stop_buffer_pct: 0.15
+
+backtest:
+  max_candles_per_pair: 1000
+  max_window_candles: 200
