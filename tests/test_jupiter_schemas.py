@@ -3,7 +3,7 @@ from pathlib import Path
 import pytest
 
 from app.core.fixtures import load_fixture
-from app.jupiter.schemas import JupiterQuoteResponse, JupiterSwapResponse
+from app.data.jupiter.schemas import JupiterQuoteResponse, JupiterSwapResponse
 
 
 def test_quote_schema_parses_fixture():

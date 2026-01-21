@@ -6,8 +6,8 @@ import pytest
 
 from app.config import get_config
 from app.data.client import MockApiClient
-from app.jupiter.provider import MockJupiterProvider
-from app.jupiter.service import JupiterSwapService, TRADING_MODE_CONFIRM
+from app.data.jupiter.provider import MockJupiterProvider
+from app.data.jupiter.service import JupiterSwapService, TRADING_MODE_CONFIRM
 from app.orchestrator.runner import run_engine
 from mock_api.server import app, reset_metrics
 

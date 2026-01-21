@@ -46,12 +46,15 @@ def propose_action(snapshot, state, config: dict) -> ActionProposal:
         breakout_strict = bool(features.get("breakout_strict", features.get("breakout")))
         range_compressed = bool(features.get("range_compressed", False))
         price_expanded = bool(features.get("price_expanded", False))
-        chain_override = bool(features.get("chain_override", False))
         missing_reasons = []
         if not range_compressed:
             missing_reasons.append("NO_RANGE_COMPRESSION")
         if not price_expanded:
             missing_reasons.append("NO_PRICE_EXPANSION")
+        chain_override = bool(features.get("chain_override", False))
+        if breakout_strict:
+            missing_reasons = []
+            chain_override = False
         current_index = snapshot.candle_index
         if state.pending_breakout_index is not None:
             if current_index is None:

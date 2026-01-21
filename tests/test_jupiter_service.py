@@ -1,7 +1,7 @@
 import pytest
 
-from app.jupiter.provider import MockJupiterProvider
-from app.jupiter.service import (
+from app.data.jupiter.provider import MockJupiterProvider
+from app.data.jupiter.service import (
     ExecutionResult,
     JupiterSwapService,
     QuoteParams,

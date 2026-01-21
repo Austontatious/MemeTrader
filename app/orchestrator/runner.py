@@ -19,7 +19,7 @@ from app.data.helius.features import compute_chain_features
 from app.data.helius.provider import MockHeliusProvider
 from app.data.market_provider import MarketDataProvider
 from app.data.birdeye.provider import MockProvider as MockMarketProvider
-from app.jupiter.service import JupiterSwapService, QuoteParams, SwapOptions
+from app.data.jupiter.service import JupiterSwapService, QuoteParams, SwapOptions
 from app.orchestrator.snapshot import build_snapshot
 from app.orchestrator.state_machine import TokenState, advance_time, apply_action
 from app.orchestrator.trade_log import TradeLogger

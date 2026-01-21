@@ -1,7 +1,7 @@
 import pytest
 
 from app.core.exceptions import UpstreamBadResponse
-from app.jupiter.provider import MockJupiterProvider
+from app.data.jupiter.provider import MockJupiterProvider
 
 
 @pytest.mark.asyncio

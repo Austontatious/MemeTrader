@@ -1,6 +1,6 @@
 import pytest
 
-from app.jupiter.request_factory import JupiterRequestError, JupiterRequestFactory
+from app.data.jupiter.request_factory import JupiterRequestError, JupiterRequestFactory
 
 
 def test_quote_request_contract():

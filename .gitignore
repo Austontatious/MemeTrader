@@ -1,9 +1,24 @@
-.venv/
-.pytest_cache/
+# Python
 __pycache__/
-*.pyc
-runs/
-data/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual env
+.venv/
+
+# Local artifacts
+/runs/
+/backtests/
+/data/
+*.log
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
+
+# Local env
 .env
 .env.*
-.DS_Store

@@ -19,9 +19,13 @@ from app.config import get_config, repo_root
 from app.orchestrator.runner import run_engine
 
 
-def _normalize_provider_choice(choice: str | None, default: str) -> str:
+def _normalize_provider_choice(choice: str | None, default: str, allowed: set[str], label: str) -> str:
     value = (choice or "").strip().lower()
-    return value or default
+    if not value:
+        value = default
+    if value not in allowed:
+        raise ValueError(f"Unknown {label} provider: {value}")
+    return value
 
 
 def _probe_server(base_url: str) -> int | None:
@@ -79,8 +83,12 @@ def cmd_mock_e2e(market_choice: str | None = None, chain_choice: str | None = No
     cfg = get_config(refresh=True)
     market_env = os.getenv("MARKET_DATA", "")
     chain_env = os.getenv("CHAIN_INTEL", "")
-    market_mode = _normalize_provider_choice(market_choice or market_env, "birdeye")
-    chain_mode = _normalize_provider_choice(chain_choice or chain_env, "helius")
+    market_mode = _normalize_provider_choice(
+        market_choice or market_env, "birdeye", {"birdeye", "mock"}, "MARKET_DATA"
+    )
+    chain_mode = _normalize_provider_choice(
+        chain_choice or chain_env, "helius", {"helius", "mock"}, "CHAIN_INTEL"
+    )
     market_provider, chain_provider = build_providers(
         market_choice=market_mode,
         chain_choice=chain_mode,
@@ -154,13 +162,30 @@ def cmd_hf_backtest(max_pairs: int, out_dir: str | None) -> None:
     print(f"Backtest complete. Summary: {Path(run_dir) / 'summary.json'}")
 
 
-def main() -> None:
+def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="MemeTrader CLI")
     parser.add_argument("command", choices=["mock-e2e", "hf-backtest"], help="Command to run")
     parser.add_argument("--max-pairs", type=int, default=25, help="Max pairs for hf-backtest")
     parser.add_argument("--out-dir", type=str, default=None, help="Output directory for hf-backtest")
-    parser.add_argument("--market-data", type=str, default=None, help="Market data provider (birdeye|mock)")
-    parser.add_argument("--chain-intel", type=str, default=None, help="Chain intel provider (helius|mock)")
+    parser.add_argument(
+        "--market-data",
+        type=str,
+        default=None,
+        choices=["birdeye", "mock"],
+        help="Market data provider (birdeye|mock)",
+    )
+    parser.add_argument(
+        "--chain-intel",
+        type=str,
+        default=None,
+        choices=["helius", "mock"],
+        help="Chain intel provider (helius|mock)",
+    )
+    return parser
+
+
+def main() -> None:
+    parser = _build_parser()
     args = parser.parse_args()
 
     if args.command == "mock-e2e":
